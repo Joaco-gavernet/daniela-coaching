@@ -1,0 +1,165 @@
+.services {
+  background-color: $color-ddl;
+  position: relative;
+  margin-top: 2rem;
+  min-height: 140vh;
+  @include breakpoint-up(medium) {
+    margin-top: 0;
+  }
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+
+  &__title {
+    display: inline-block;
+    padding: 10px 20px 30px 20px;
+    position: absolute;
+    top: -45px;
+    left: 20px;
+    z-index: 3;
+    @include font($font-xm, bold, none);
+    background-color: $color-ddl;
+    border-radius: 20px;
+
+    @include breakpoint-up(medium) {
+      background-color: $color-claro;
+    }
+  }
+
+  &__img {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .img-background-1 {
+    position: absolute;
+    top: 40%;
+    width: 700px;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+
+  .img-background-2 {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 600px;
+    transform: translateY(-50%);
+    z-index: 4;
+  }
+
+  .img-lamp {
+    position: absolute;
+    max-width: 220px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+  }
+
+  &__container {
+    overflow: hidden;
+    position: absolute;
+    z-index: 7;
+    top: 40%;
+    left: -120px;
+  }
+  
+  .background__image {
+    width: 120%;
+
+    @media (min-width: 400px) {
+      width: 80%;
+      position: relative;
+      left: 10%;
+    }
+  }
+
+  &__info {
+    @include flex(column, center, center);
+    position: relative;
+    top: -20%;
+    left: -5%;
+    text-align: center;
+    width: 110%;
+  }
+
+  .services__text {
+    width: 60%;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+
+    > h2 {
+      @include font($font-xm, bold, none);
+
+      > span {
+        color: $color-orange;
+      }
+    }
+    
+    > p {
+      @include font($font-m, normal, none);
+      margin-top: .5rem;
+    }
+  }
+}
+
+.services-desktop {
+  min-height: 80vh;
+  position: relative;
+  @include breakpoint-up(medium) {
+    background-color: $color-salmon;
+
+    .services__title {
+      background-color: $color-salmon;
+    }
+  }
+  @include breakpoint-down(small) {
+    display: none;
+  }
+  @include breakpoint-down(medium) {
+    .services-desktop__info {
+      @include flex(column, center, center);
+      min-height: 120vh;
+    }
+
+    .info__article {
+      order: 1;
+      margin-top: 2rem;
+      text-align: center;
+
+      > p {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__info {
+    @include flex(row, center, center);
+    position: relative;
+    min-height: inherit;
+  }
+
+  .info__img {
+    order: 1;
+    width: 500px;
+  }
+
+  .info__article {
+    @include flex(column, center, flex-start);
+    position: relative;
+    overflow: hidden;
+    max-width: 400px;
+
+    > h2 {
+      @include font($font-xl, bold, none);
+    }
+
+    span {
+      color: $color-orange;
+    }
+  }
+}

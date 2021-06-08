@@ -1,0 +1,104 @@
+.about {
+  background-color: $color-claro;
+  position: relative;
+
+  &__title {
+    display: inline-block;
+    padding: 10px 20px 30px 20px;
+    position: absolute;
+    top: -45px;
+    left: 20px;
+    @include font($font-xm, bold, none);
+    background-color: $color-claro;
+    border-radius: 20px;
+  }
+
+  .content {
+    min-height: 110vh;
+    position: relative;
+    overflow: hidden;
+    background-color: $color-claro;
+    background-image: url('../img/background-4-l.png');
+    background-position: 10% 40%;
+    background-repeat: no-repeat;
+
+    @include breakpoint-up(medium) {
+      display: none;
+    }
+  }
+
+  .img-profile {
+    max-width: 230px;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+  }
+
+  .img-dialog {
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+  }
+
+  .content__text {
+    position: absolute;
+    left: 50%;
+    top: 64%;
+    transform: translate(-50%, 0);
+    z-index: 3;
+    @include font($font-m, normal, none);
+    text-align: center;
+    width: 250px;
+
+    > .daniela {
+      font-family: 'Muthiara';
+    }
+
+    > span {
+      color: $color-orange;
+    }
+  }
+
+  .content-desktop {
+    background-color: $color-claro;
+    @include breakpoint-down(small){
+      display: none;
+    }
+  }
+
+  .profile-container {
+    background-image: url('../../img/background-4-l.png');
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: 20% -20%;
+    position: relative;
+    min-height: 90vh;
+    @include breakpoint-up(xlarge){
+      background-size: 100%;
+      background-position: 10% -10%;
+    }
+  }
+
+  .img-profile-desktop {
+    max-width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+  }
+
+  .dialog-container {
+    position: absolute;
+    left: 35%;
+    top: 5%;
+    z-index: 2;
+  }
+
+  .text-desktop {
+    top: 30%;
+    left: 57%;
+  }
+}

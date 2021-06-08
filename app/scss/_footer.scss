@@ -1,0 +1,31 @@
+.footer {
+  min-height: 40vh;
+  background-color: $color-gris-oscuro;
+  color: $color-claro;
+  @include flex(column, space-evenly, center);
+  @include font($font-s, normal, none);
+  text-align: center;
+  @include breakpoint-up(medium) {
+    flex-flow: row;
+  }
+  
+  .footer__logo {
+    max-width: 50px;
+  }
+  
+  .cv-container {
+    min-height: 10vh;
+    @include flex(column, space-evenly, center);
+    @include breakpoint-up(medium) {
+      min-height: 15vh;
+    }
+  }
+  
+  .jg-container {
+    min-height: 10vh;
+    @include flex(column, space-evenly, center);
+    @include breakpoint-up(medium) {
+      min-height: 15vh;
+    }
+  }
+}
