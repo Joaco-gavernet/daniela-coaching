@@ -37,18 +37,27 @@
     </span>
 
     <span class="hero__links">
-      <p>Inicio</p>
-      <p>Servicio</p>
-      <p>Contacto</p>
+      <a href="#section3">Sobre mi</a>
+      <a href="#section4">Servicio</a>
+      <a href="#section5">Contacto</a>
     </span>
   </main>
+
+  <nav class="nav-desktop">
+    <span class="nav__links">
+      <a href="#index">Inicio</a>
+      <a href="#section3">Sobre mi</a>
+      <a href="#section4b">Servicio</a>
+      <a href="#section5">Contacto</a>
+    </span>
+  </nav>
 
   <main class="hero-desktop">
     <div class="hero-desktop__menuContainer">
       <ul>
-        <li data-text="Inicio"><a href="#">Inicio</a></li>
-        <li data-text="Servicio"><a href="#">Servicio</a></li>
-        <li data-text="Contacto"><a href="#">Contacto</a></li>
+        <li data-text="Sobre mi"><a href="#section3">Sobre mi</a></li>
+        <li data-text="Servicio"><a href="#section4b">Servicio</a></li>
+        <li data-text="Contacto"><a href="#section5">Contacto</a></li>
       </ul>
     </div>
     <div class="hero-desktop__logoContainer">
@@ -62,8 +71,10 @@
     </div>
   </main>
 
-  <section class="about">
-    <h2 class="about__title animate__animated animate__fadeInUp animate__delay-3s">Sobre mi</h2>
+  <section class="about" id="section3">
+    <a href="#section3">
+      <h2 class="about__title animate__animated animate__fadeInUp animate__delay-3s">Sobre mi</h2>
+    </a>
     <div class="content">
       <img src="img/foto-perfil-m.png" alt="Daniela" class="img-profile">
       <img src="img/dialog-box-mobile.png" alt="dialog box" class="img-dialog">
@@ -88,8 +99,10 @@
     </div>
   </section>
 
-  <section class="services">
-    <h2 class="services__title wow animate__animated animate__fadeInUp" data-wow-delay="1s">Servicio</h2>
+  <section class="services"  id="section4">
+    <a href="#section4">
+      <h2 class="services__title wow animate__animated animate__fadeInUp" data-wow-delay="1s">Servicio</h2>
+    </a>
     <div class="services__img">
       <img src="img/background-3a.png" alt="Background image" class="img-background-1">
       <img src="img/background-3b.png" alt="Background image" class="img-background-2">
@@ -106,8 +119,10 @@
     </div>
   </section>
 
-  <section class="services-desktop">
-    <h2 class="services__title wow animate__animated animate__fadeInUp" data-wow-delay="1s">Servicio</h2>
+  <section class="services-desktop" id="section4b">
+    <a href="#section4b">
+      <h2 class="services__title wow animate__animated animate__fadeInUp" data-wow-delay="1s">Servicio</h2>
+    </a>
     <div class="services-desktop__info">
       <img src="img/lamp-desktop.png" alt="Lamp image" class="info__img">
 
@@ -118,8 +133,10 @@
     </div>
   </section>
 
-  <section class="contact">
-    <h2 class="contact__title wow animate__animated animate__fadeInUp" data-wow-delay="1s">Contacto</h2>
+  <section class="contact" id="section5">
+    <a href="#section5">
+      <h2 class="contact__title wow animate__animated animate__fadeInUp" data-wow-delay="1s">Contacto</h2>
+    </a>
     
     <form action="#" class="form">
       <h3 class="contact__subtitle">Consultame!</h3>
@@ -157,16 +174,16 @@
       <i class="fas fa-3x fa-at"></i>
       <p>coachvfdde@gmail.com</p>
       <div class="info__logos">
-        <a href="">
+        <a href="https://www.instagram.com/coaching.vyf/">
           <i class="fab fa-3x fa-instagram"></i>
         </a>
-        <a href="">
+        <a href="https://api.whatsapp.com/send?phone=1150142760">
           <i class="fab fa-3x fa-whatsapp"></i>
         </a>
-        <a href="">
+        <a href="https://www.facebook.com/coaching.vocacional.98">
           <i class="fab fa-3x fa-facebook-f"></i>
         </a>
-        <a href="">
+        <a href="https://www.linkedin.com/in/daniela-d%C3%ADaz-erbetta-645908182/">
           <i class="fab fa-3x fa-linkedin-in"></i>
         </a>
         <a href="">
@@ -177,19 +194,25 @@
   </section>
 
   <footer class="footer">
-    <div class="cv-container">
-      <p>&#169;Daniela Coaching &#169;2021</p>
-      <img src="img/logo-m-fit-border.png" alt="Logo" class="footer__logo">
-    </div>
-    <div class="jg-container">
-      <p>&#169;Desarrollado por Joaquin Gavernet</p>
-      <img src="img/pi-blanco-s.png" alt="Logo" class="footer__logo">
-    </div>
+    <a href="#index">
+      <div class="cv-container">
+        <p>&#169;Daniela Coaching &#169;2021</p>
+        <img src="img/logo-m-fit-border.png" alt="Logo" class="footer__logo">
+      </div>
+    </a>
+    <a href="https://joacogavernet.com.ar/">
+      <div class="jg-container">
+        <p>&#169;Desarrollado por Joaquin Gavernet</p>
+        <img src="img/pi-blanco-s.png" alt="Logo" class="footer__logo">
+      </div>
+    </a>
   </footer>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="src/wow.min.js"></script>
   <script>
     new WOW().init();
   </script>
+  <script src="app/js/script.js"></script>
 </body>
 </html>

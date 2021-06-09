@@ -144,7 +144,7 @@ a, a:visited, a:hover {
 }
 
 a:hover {
-  color: #93a1b8;
+  color: #ff8000;
 }
 
 ul {
@@ -193,6 +193,48 @@ button, .button {
   border-radius: 50px;
   border: 0;
   cursor: pointer;
+}
+
+.nav-desktop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  min-height: 10vh;
+  width: 100%;
+  background-color: #dfcdcdbb;
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: none;
+  display: none;
+}
+.nav-desktop .nav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 80%;
+  min-height: 5vh;
 }
 
 .hero {
@@ -253,7 +295,6 @@ button, .button {
   left: 0;
   right: 0;
   top: 40%;
-  text-align: center;
   -webkit-animation: links-init 2s 1s 1 forwards;
           animation: links-init 2s 1s 1 forwards;
 }
@@ -484,7 +525,7 @@ button, .button {
   }
 }
 .about .profile-container {
-  background-image: url("../../img/background-4-l.png");
+  background-image: url("../img/background-4-l.png");
   background-repeat: no-repeat;
   background-size: 120%;
   background-position: 20% -20%;

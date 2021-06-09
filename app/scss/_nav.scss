@@ -1,3 +1,19 @@
-.hola {
-  color: blue;
+.nav-desktop {
+  @include flex(row, center, center);
+  position: absolute;
+  min-height: 10vh;
+  width: 100%;
+  background-color: $color-salmon-light;
+  color: $color-oscuro;
+  @include font($font-xm, bold, none);
+  display: none;
+
+
+  .nav__links {
+    @include flex(row, space-evenly, center);
+    min-width: 80%;
+    min-height: 5vh;
+  }
+
+
 }
