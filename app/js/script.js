@@ -67,4 +67,20 @@ $(document).ready(function(){
       }
     }
   })
-})
+
+  mainNav();
+  $(window).scroll(function() {
+    mainNav();
+  });
+  function mainNav() {
+    var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    if (top > 596) $('.nav-desktop').stop().animate({
+      "opacity": '1'
+    });
+    else $('.nav-desktop').stop().animate({
+      "opacity": '0'
+    });
+  }
+
+}) // dom checking
+

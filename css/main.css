@@ -128,6 +128,7 @@ body {
   color: #1a1a1a;
   line-height: 1.5;
   background-color: #fffdf8;
+  position: relative;
 }
 body.no-scroll {
   overflow: hidden;
@@ -196,15 +197,32 @@ button, .button {
 }
 
 .nav-desktop {
-  position: absolute;
-  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
   width: 100%;
   background-color: #dfcdcdbb;
   color: #1a1a1a;
   font-size: 1.5rem;
   font-weight: bold;
   text-transform: none;
-  display: none;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  z-index: 4;
 }
 .nav-desktop .nav__links {
   display: -webkit-box;
