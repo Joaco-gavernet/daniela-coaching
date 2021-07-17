@@ -821,7 +821,7 @@ button, .button {
   background-position: 10% 40%;
   background-repeat: no-repeat;
 }
-@media (min-width: 40em) {
+@media (min-width: 64em) {
   .about .content {
     display: none;
   }
@@ -831,22 +831,28 @@ button, .button {
   z-index: 1;
   position: absolute;
   left: 50%;
-  top: 35%;
+  top: 29%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+@media (min-width: 40em) {
+  .about .img-profile {
+    max-width: 300px;
+  }
 }
 .about .img-dialog {
   position: absolute;
   left: 50%;
-  top: 32%;
+  top: 24%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   z-index: 2;
+  width: 600px;
 }
 .about .content__text {
   position: absolute;
   left: 50%;
-  top: 64%;
+  top: 54%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   z-index: 3;
@@ -854,7 +860,7 @@ button, .button {
   font-weight: normal;
   text-transform: none;
   text-align: center;
-  width: 250px;
+  width: 300px;
 }
 .about .content__text > .daniela {
   font-family: "Muthiara";
@@ -862,10 +868,17 @@ button, .button {
 .about .content__text > span {
   color: #ff8000;
 }
+.about .content__text .content__cta {
+  margin-top: 10px;
+  cursor: pointer;
+}
 .about .content-desktop {
   background-color: #fffdf8;
 }
-@media (max-width: 39.9375em) {
+.about .content-desktop .dialog-container__img {
+  width: 700px;
+}
+@media (max-width: 63.9375em) {
   .about .content-desktop {
     display: none;
   }

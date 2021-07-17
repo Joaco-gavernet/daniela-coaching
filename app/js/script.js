@@ -11,19 +11,19 @@ $(document).ready(function(){
         switch (hash) {
           case '#section3':
             window.scrollTo({
-              top: 503,
+              top: 692,
               behavior: 'smooth'
             });
             break;
           case '#section4':
             window.scrollTo({
-              top: 1169,
+              top: 1565,
               behavior: 'smooth'
             });
             break;
             case '#section5':
             window.scrollTo({
-              top: 1960,
+              top: 2628,
               behavior: 'smooth'
             });
             break;

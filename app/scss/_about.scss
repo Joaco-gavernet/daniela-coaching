@@ -22,7 +22,7 @@
     background-position: 10% 40%;
     background-repeat: no-repeat;
 
-    @include breakpoint-up(medium) {
+    @include breakpoint-up(large) {
       display: none;
     }
   }
@@ -32,27 +32,32 @@
     z-index: 1;
     position: absolute;
     left: 50%;
-    top: 35%;
+    top: 29%;
     transform: translate(-50%, -50%);
+
+    @include breakpoint-up(medium) {
+      max-width: 300px;
+    }
   }
 
   .img-dialog {
     position: absolute;
     left: 50%;
-    top: 32%;
+    top: 24%;
     transform: translate(-50%, 0);
     z-index: 2;
+    width: 600px;
   }
 
   .content__text {
     position: absolute;
     left: 50%;
-    top: 64%;
+    top: 54%;
     transform: translate(-50%, 0);
     z-index: 3;
     @include font($font-m, normal, none);
     text-align: center;
-    width: 250px;
+    width: 300px;
 
     > .daniela {
       font-family: 'Muthiara';
@@ -61,11 +66,21 @@
     > span {
       color: $color-orange;
     }
+
+    .content__cta {
+      margin-top: 10px;
+      cursor: pointer;
+    }
   }
 
   .content-desktop {
     background-color: $color-claro;
-    @include breakpoint-down(small){
+    
+    .dialog-container__img {
+      width: 700px;
+    }
+
+    @include breakpoint-down(medium){
       display: none;
     }
   }
