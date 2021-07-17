@@ -55,9 +55,9 @@
   <main class="hero-desktop">
     <div class="hero-desktop__menuContainer">
       <ul>
-        <li data-text="Sobre mi"><a href="#section3">Sobre mi</a></li>
-        <li data-text="Servicio"><a href="#section4b">Servicio</a></li>
-        <li data-text="Contacto"><a href="#section5">Contacto</a></li>
+        <li><a href="#section3">Sobre mi</a></li>
+        <li><a href="#section4b">Servicio</a></li>
+        <li><a href="#section5">Contacto</a></li>
       </ul>
     </div>
     <div class="hero-desktop__logoContainer">
@@ -68,6 +68,7 @@
         >
         <h1>C<span>o</span>aching v<span>o</span>caci<span>o</span>nal</h1>
         <h2>by <span>Daniela Diaz Erbetta</span></h2>
+        <a href="#section5" class="hero-desktop__logoContainer__button">Contacto</a>
     </div>
   </main>
 
@@ -138,7 +139,12 @@
       <h2 class="contact__title wow animate__animated animate__fadeInUp" data-wow-delay="1s">Contacto</h2>
     </a>
     
-    <form action="#" class="form">
+    <form 
+      class="form"
+      method="POST" 
+      enctype="multipart/form-data"
+      action="https://formspree.io/f/xoqpoybv"
+    >
       <h3 class="contact__subtitle">Consultame!</h3>
       <input 
         type="text" 
@@ -155,39 +161,32 @@
         class="input" 
         cols="auto" 
         rows="5" 
-        placeholder="Descripción">
-      </textarea>
+        placeholder="Descripción"></textarea>
       <button 
         type="submit" 
         class="button">
         Enviar
       </button>
     </form>
-    <!-- <form 
-      method="POST" 
-      enctype="multipart/form-data"
-      action="https://formspree.io/f/xoqpoybv"
-      class="form">
-    </form> -->
 
     <div class="contact__info">
-      <i class="fas fa-3x fa-at"></i>
+      <em class="fas fa-3x fa-at"></em>
       <p>coachvfdde@gmail.com</p>
       <div class="info__logos">
         <a href="https://www.instagram.com/coaching.vyf/">
-          <i class="fab fa-3x fa-instagram"></i>
+          <em class="fab fa-3x fa-instagram"></em>
         </a>
         <a href="https://api.whatsapp.com/send?phone=1150142760">
-          <i class="fab fa-3x fa-whatsapp"></i>
+          <em class="fab fa-3x fa-whatsapp"></em>
         </a>
         <a href="https://www.facebook.com/coaching.vocacional.98">
-          <i class="fab fa-3x fa-facebook-f"></i>
+          <em class="fab fa-3x fa-facebook-f"></em>
         </a>
         <a href="https://www.linkedin.com/in/daniela-d%C3%ADaz-erbetta-645908182/">
-          <i class="fab fa-3x fa-linkedin-in"></i>
+          <em class="fab fa-3x fa-linkedin-in"></em>
         </a>
         <a href="">
-          <i class="fab fa-3x fa-google-drive"></i>
+          <em class="fab fa-3x fa-google-drive"></em>
         </a>
       </div>
     </div>
@@ -208,6 +207,8 @@
     </a>
   </footer>
 
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="src/wow.min.js"></script>
   <script>

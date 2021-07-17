@@ -56,12 +56,22 @@
 
     .button {
       background: $color-orange;
-      border-radius: 20px;
-      border: none;
-      color: $color-oscuro;
+      border-radius: 100px;
+      padding: 20px 60px;
+      color: $color-claro;
       margin-top: 1.8rem;
+      border: none;
       outline: none;
-      @include font($font-m, bold, none);
+      @include font($font-xm, bold, none);
+
+      &:hover {
+        animation: hover 1200ms linear 2 alternate;
+      }
+  
+      &:active {
+        animation: active 1200ms ease 1 alternate; 
+        background: $color-orange-light;
+      }
     }
   }
 

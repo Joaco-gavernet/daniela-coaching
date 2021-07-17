@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $('a').on('click', function(event) {
     // store the destination of the link in a variable
-    let hash = this.hash;
+    const hash = this.hash;
     // check if is an internal link or an external one
     if (hash.charAt(0) == '#') {
       event.preventDefault();
