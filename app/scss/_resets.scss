@@ -29,6 +29,10 @@ body {
   }
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 h1, h2, h3 {
   line-height: 1.15;
 }
@@ -79,7 +83,7 @@ ul {
 
 // Visibility
 .hide-for-mobile {
-  @include breakpoint-down ("medium") {
+  @include breakpoint-down (large) {
     display: none;
   }
 }
@@ -96,14 +100,4 @@ button, .button {
   border-radius: 50px;
   border: 0;
   cursor: pointer;
-  // background: linear-gradient(to right, $limeGreen, $brightCyan);
-  // color: $white;
-  // font-weight: 400;
-  // font-size: $font-sm;
-  // color: $white;
-  // transition: opacity 300ms ease-in-out;
-
-  // &:hover {
-  //   opacity: 0.75;
-  // }
 }

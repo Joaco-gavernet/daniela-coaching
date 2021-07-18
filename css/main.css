@@ -454,6 +454,10 @@ body.no-scroll {
   overflow: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 h1, h2, h3 {
   line-height: 1.15;
 }
@@ -496,7 +500,7 @@ ul {
   padding-left: 1.0625rem;
 }
 
-@media (max-width: 63.9375em) {
+@media (max-width: 87.4375) {
   .hide-for-mobile {
     display: none;
   }
@@ -532,7 +536,7 @@ button, .button {
           align-items: center;
   height: 10vh;
   width: 100%;
-  background-color: #dfcdcdbb;
+  background-color: #dfcdcd;
   color: #1a1a1a;
   font-size: 1.5rem;
   font-weight: bold;
@@ -543,6 +547,11 @@ button, .button {
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   z-index: 4;
+}
+@media (max-width: 87.4375) {
+  .nav-desktop {
+    display: none;
+  }
 }
 .nav-desktop .nav__links {
   display: -webkit-box;
@@ -576,6 +585,44 @@ button, .button {
   .hero .hero__img {
     max-width: 280px;
   }
+}
+.hero__title {
+  position: absolute;
+  margin-top: 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero__title h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.hero__title h1 > span {
+  color: #ff8000;
+}
+.hero__title h2 {
+  font-size: 0.5rem;
+  font-weight: normal;
+  text-transform: none;
+  margin-top: 0.8rem;
+}
+.hero__title h2 > span {
+  font-size: 0.75rem;
+  font-weight: normal;
+  text-transform: none;
+  font-family: "Muthiara";
 }
 .hero__imgContainer {
   background-color: #ffffcc;
@@ -724,7 +771,7 @@ button, .button {
   width: 60%;
 }
 .hero-desktop__logo {
-  max-width: 400px;
+  max-width: 200px;
 }
 .hero-desktop__logoContainer {
   min-height: 100vh;
@@ -773,10 +820,10 @@ button, .button {
   text-transform: none;
   font-family: "Muthiara";
 }
-.hero-desktop__logoContainer__button {
+.hero-desktop .logoContainer__button {
   background: #ff8000;
   border-radius: 100px;
-  padding: 20px 60px;
+  padding: 10px 50px;
   color: #fffdf8;
   text-decoration: none;
   margin-top: 1.8rem;
@@ -786,11 +833,12 @@ button, .button {
   font-weight: bold;
   text-transform: none;
 }
-.hero-desktop__logoContainer__button:hover {
+.hero-desktop .logoContainer__button:hover {
   -webkit-animation: hover 1200ms linear 2 alternate;
           animation: hover 1200ms linear 2 alternate;
+  color: white;
 }
-.hero-desktop__logoContainer__button:active {
+.hero-desktop .logoContainer__button:active {
   -webkit-animation: active 1200ms ease 1 alternate;
           animation: active 1200ms ease 1 alternate;
   background: #ffa851;
@@ -813,7 +861,7 @@ button, .button {
   border-radius: 20px;
 }
 .about .content {
-  min-height: 110vh;
+  height: 55rem;
   position: relative;
   overflow: hidden;
   background-color: #fffdf8;
@@ -852,7 +900,7 @@ button, .button {
 .about .content__text {
   position: absolute;
   left: 50%;
-  top: 54%;
+  top: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   z-index: 3;
@@ -869,8 +917,17 @@ button, .button {
   color: #ff8000;
 }
 .about .content__text .content__cta {
-  margin-top: 10px;
+  margin-top: 15px;
   cursor: pointer;
+}
+.about .content__text .content__cta:hover {
+  -webkit-animation: hover 1200ms linear 2 alternate;
+          animation: hover 1200ms linear 2 alternate;
+}
+.about .content__text .content__cta:active {
+  -webkit-animation: active 1200ms ease 1 alternate;
+          animation: active 1200ms ease 1 alternate;
+  background: #ffa851;
 }
 .about .content-desktop {
   background-color: #fffdf8;
@@ -912,6 +969,9 @@ button, .button {
 .about .text-desktop {
   top: 30%;
   left: 57%;
+}
+.about .text-desktop .content__cta {
+  display: block;
 }
 
 .services {
@@ -1124,10 +1184,18 @@ button, .button {
   overflow: hidden;
   max-width: 400px;
 }
+@media (min-width: 64em) {
+  .services-desktop .info__article {
+    margin-right: 8rem;
+  }
+}
 .services-desktop .info__article > h2 {
   font-size: 3rem;
   font-weight: bold;
   text-transform: none;
+}
+.services-desktop .info__article > p {
+  margin-top: 2rem;
 }
 .services-desktop .info__article span {
   color: #ff8000;
@@ -1136,7 +1204,6 @@ button, .button {
 .contact {
   background-color: #fffdf8;
   position: relative;
-  padding-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1200,6 +1267,7 @@ button, .button {
           align-items: center;
   width: 100%;
   min-height: 70vh;
+  padding: 4rem 0;
   border-radius: 50px;
 }
 .contact .form .input {
@@ -1210,8 +1278,11 @@ button, .button {
   font-size: 1.2rem;
   font-weight: normal;
   text-transform: none;
+  font-family: "Poppins", sans-serif;
   margin-right: 1rem;
   margin-left: 1rem;
+  width: 45%;
+  min-width: 270px;
 }
 @media (min-width: 64em) {
   .contact .form .input {
@@ -1224,7 +1295,7 @@ button, .button {
 .contact .form .button {
   background: #ff8000;
   border-radius: 100px;
-  padding: 20px 60px;
+  padding: 10px 50px;
   color: #fffdf8;
   margin-top: 1.8rem;
   border: none;

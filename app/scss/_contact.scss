@@ -1,7 +1,6 @@
 .contact {
   background-color: $color-claro;
   position: relative;
-  padding-top: 4rem;
   @include flex(column, center, center);
 
   @include breakpoint-up(large) {
@@ -34,6 +33,7 @@
     @include flex(column, center, center);
     width: 100%;
     min-height: 70vh;
+    padding: 4rem 0;
     border-radius: 50px;
 
     .input {
@@ -42,8 +42,11 @@
       border-radius: 20px;
       outline: none;
       @include font(1.2rem, normal, none);
+      font-family: 'Poppins', sans-serif;
       margin-right: 1rem;
       margin-left: 1rem;
+      width: 45%;
+      min-width: 270px;
 
       @include breakpoint-up(large) {
         padding: 15px 35px;
@@ -57,7 +60,7 @@
     .button {
       background: $color-orange;
       border-radius: 100px;
-      padding: 20px 60px;
+      padding: 10px 50px;
       color: $color-claro;
       margin-top: 1.8rem;
       border: none;

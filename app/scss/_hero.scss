@@ -11,6 +11,31 @@
     }
   }
 
+  &__title {
+    position: absolute;
+    margin-top: 2rem;
+    width: 100%;
+    @include flex(column, center, center);
+
+    h1 {
+      @include font($font-m, bold, uppercase);
+  
+      > span {
+        color: $color-orange;
+      }
+    }
+  
+    h2 {
+      @include font($font-xs, normal, none);
+      margin-top: 0.8rem;
+  
+      > span {
+        @include font($font-s, normal, none);
+        font-family: 'Muthiara';
+      }
+    }
+  }
+
   &__imgContainer {
     background-color: $color-ddl;
     position: absolute;
@@ -121,7 +146,7 @@
   }
 
   &__logo {
-    max-width: 400px;
+    max-width: 200px;
   }
 
   &__logoContainer {
@@ -163,10 +188,10 @@
     }
   }
 
-  &__logoContainer__button {
+  .logoContainer__button {
     background: $color-orange;
     border-radius: 100px;
-    padding: 20px 60px;
+    padding: 10px 50px;
     color: $color-claro;
     text-decoration: none;
     margin-top: 1.8rem;
@@ -176,6 +201,7 @@
 
     &:hover {
       animation: hover 1200ms linear 2 alternate;
+      color: white;
     }
 
     &:active {

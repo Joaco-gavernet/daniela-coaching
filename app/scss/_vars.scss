@@ -1,4 +1,5 @@
 // Font Sizes
+$font-xs: 0.5rem;
 $font-s: 0.75rem; // 12px
 $font-m: 1rem; // 16px
 $font-xm: 1.5rem; // 20px
@@ -27,7 +28,6 @@ $color-positivo: #438A2E;
 $box-shadow: -5px 5px 20px rgba(0, 0, 0, .8);
 
 // Keyframes
-
 @keyframes active { 
   0% {transform: scale(1,1);}
   90% {transform: scale(.9,.88);}
