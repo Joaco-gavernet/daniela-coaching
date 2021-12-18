@@ -1,5 +1,8 @@
-$(document).ready(function(){
-  $('a').on('click', function(event) {
+$(document).ready(() => {
+  var allLinks = $('a');
+  console.log('allLinks', allLinks);
+
+  $('a').on('click', function (event) {
     // store the destination of the link in a variable
     const hash = this.hash;
     // check if is an internal link or an external one
@@ -21,7 +24,7 @@ $(document).ready(function(){
               behavior: 'smooth'
             });
             break;
-            case '#section5':
+          case '#section5':
             window.scrollTo({
               top: 2628,
               behavior: 'smooth'
@@ -35,7 +38,7 @@ $(document).ready(function(){
             });
         }
       }
-  
+
       // switch for desktop
       if ($(window).width() >= 1024) {
         switch (hash) {
@@ -70,7 +73,7 @@ $(document).ready(function(){
 
   if ($(window).width() >= 1024) {
     mainNav();
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       mainNav();
     });
     function mainNav() {
